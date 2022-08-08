@@ -13,6 +13,8 @@ import {
   Tbody,
   VStack,
   HStack,
+  Skeleton,
+  SkeletonText,
 } from '@chakra-ui/react';
 import useMealStore from '../stores/meal';
 import shallow from 'zustand/shallow';
@@ -34,6 +36,16 @@ function mapIngredientsToMeasure(mealData) {
 
   return result;
 }
+
+const MealSkeleton = () => {
+  return (
+    <Box mt={5} mx="auto" maxWidth="600px" textAlign="center">
+      <Skeleton w={600} h={600} rounded="lg" />
+      <Skeleton height="32px" mt={5} />
+      <SkeletonText noOfLines={2} mt={5} />
+    </Box>
+  );
+};
 
 const Meal = () => {
   const { mealId } = useParams();
@@ -65,7 +77,7 @@ const Meal = () => {
         Back
       </Button>
       {loading || !displayedSingleMeal ? (
-        'loading...'
+        <MealSkeleton />
       ) : (
         <Box mt={5} mx="auto" maxWidth="600px" textAlign="center">
           <Image

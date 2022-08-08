@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Box
       pb={10}
-      pt={5}
+      pt={0}
       borderBottomWidth="1px"
       borderColor="white"
       color="white"
