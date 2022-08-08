@@ -1,4 +1,4 @@
-![](C:\Users\W\Documents\Projects\meals-catalogue\src\assets\paradimemeals.svg)
+![](src/assets/paradimemeals.svg)
 
 # Prdm Meal Catalogue
 
