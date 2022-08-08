@@ -21,6 +21,7 @@ const useMealStore = create((set, get) => ({
   allMeals: [],
   getAllMeals: async () => {
     set({ error: false, loading: true });
+    get().clearFilters();
     try {
       const result = await fetchAllMeals(); // this is a bit of a leaky abstraction
 
