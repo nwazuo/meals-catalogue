@@ -1,4 +1,4 @@
-![](./src/assets/paradimemeals.svg)
+![](./src/assets/prdmmeals.svg)
 
 # Prdm Meal Catalogue(Catalogue of Meals)
 
