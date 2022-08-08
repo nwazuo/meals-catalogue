@@ -1,5 +1,5 @@
 import { Text, Box, Flex, HStack } from '@chakra-ui/react';
-import logo from '../assets/paradimemeals.svg';
+import logo from '../assets/prdmmeals.svg';
 
 const Header = () => {
   return (
