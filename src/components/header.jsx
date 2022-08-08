@@ -13,7 +13,7 @@ const Header = () => {
       <HStack spacing="12px">
         <img src={logo} width={64} />
         <Text fontSize="4xl" py={0} fontWeight="bold">
-          Prdm Kitchen
+          Prdm Meals
         </Text>
       </HStack>
       <Text mt={2}>
