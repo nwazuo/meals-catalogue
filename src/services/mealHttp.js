@@ -44,3 +44,7 @@ export async function fetchAllMeals() {
 
   return Promise.all(requests);
 }
+
+export async function fetchMeal(id) {
+  return http.get(`/lookup.php?i=${id}`);
+}

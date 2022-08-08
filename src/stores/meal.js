@@ -1,5 +1,5 @@
 import create from 'zustand';
-import { fetchAllMeals } from '../services/mealHttp';
+import { fetchAllMeals, fetchMeal } from '../services/mealHttp';
 
 // TODO: write unit test
 function getFilterValuesForParam(param, arrayOfObjects) {
@@ -9,6 +9,8 @@ function getFilterValuesForParam(param, arrayOfObjects) {
   return Array.from(dedupedValues);
 }
 
+// TODO: split store into different slices
+
 const useMealStore = create((set, get) => ({
   loading: false,
   error: false,
@@ -16,7 +18,6 @@ const useMealStore = create((set, get) => ({
   setError: (val) => set({ error: val }),
 
   displayedMeals: [],
-
   allMeals: [],
   getAllMeals: async () => {
     set({ error: false, loading: true });
@@ -58,6 +59,20 @@ const useMealStore = create((set, get) => ({
       });
     } catch (e) {
       set({ error: true, loading: false });
+    }
+  },
+
+  displayedSingleMeal: null,
+  getSingleMeal: async (id) => {
+    set({ error: false, loading: true });
+    try {
+      const result = await fetchMeal(id);
+      if (!result.data.meals) {
+        throw Error('Meal not found!');
+      }
+      set({ displayedSingleMeal: result.data.meals[0], loading: false });
+    } catch (e) {
+      set({ error: false, loading: false });
     }
   },
 
