@@ -1,6 +1,6 @@
-![](src/assets/paradimemeals.svg)
+![](./src/assets/paradimemeals.svg)
 
-# Prdm Meal Catalogue
+# Prdm Meal Catalogue(Catalogue of Meals)
 
 ## Tasty and healthy meals powered by frictionless collaboration. 
 
@@ -49,9 +49,10 @@ yarn preview
 * [Meal Catalogue API - TheMealDB.com](https://www.themealdb.com/)
 * [React](https://reactjs.org)
 * [Vite](https://vitejs.dev/)
-* [Zustand]([pmndrs/zustand: 🐻 Bear necessities for state management in React (github.com)](https://github.com/pmndrs/zustand))
+* [Zustand](https://github.com/pmndrs/zustand)
 * [Chakra UI](https://chakra-ui.com)
 * [Axios](https://axios-http.com/)
 * [React Router](https://reactrouter.com/)
 * [Eslint](https://eslint.org/)
+* [Serving Dish Icon](https://thenounproject.com/browse/icons/term/serving-dish) by alimasykurm from [Noun Project](https://thenounproject.com)
 
