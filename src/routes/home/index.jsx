@@ -1,10 +1,10 @@
 import { Text, Box, GridItem, SimpleGrid } from '@chakra-ui/react';
-import useMealStore from '../stores/meal';
+import useMealStore from '../../stores/meal';
 import shallow from 'zustand/shallow';
 import { useEffect } from 'react';
-import Card from '../components/card';
-import CardSkeleton from '../components/cardSkeleton';
-import Filter from '../components/filter';
+import Card from '@components/card';
+import CardSkeleton from '@components/cardSkeleton';
+import Filter from '@components/filter';
 
 const getMealsSkeleton = () =>
   Array(3)
