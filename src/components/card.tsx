@@ -1,7 +1,13 @@
-import { Flex, LinkBox, LinkOverlay, Text, Image, Box } from '@chakra-ui/react';
+import { Flex, Text, Image, Box } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ imageUrl, title, url }) => {
+export type CardProps = {
+  title: string
+  imageUrl?: string,
+  url?: string
+}
+
+const Card = ({ imageUrl, title, url }: CardProps) => {
   return (
     <Link to={url}>
       <Box
